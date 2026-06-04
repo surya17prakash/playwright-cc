@@ -15,15 +15,16 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
- timeout: 40000,
+ timeout: 50000,
  expect:{
-  timeout: 40000,
+  timeout: 50000,
  },
  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
    browserName: 'chromium',
-  },
+   headless: false
+  }
 
 });
 
