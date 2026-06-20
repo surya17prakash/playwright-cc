@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test.only('client test', async({browser})=>{
+test('client test', async({browser})=>{
     const context = await browser.newContext();
     const page= await context.newPage();
     await page.goto("https://rahulshettyacademy.com/client/");
